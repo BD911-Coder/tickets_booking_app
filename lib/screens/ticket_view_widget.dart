@@ -42,8 +42,6 @@ class TicketViewWidget extends StatelessWidget {
                               child: LayoutBuilder(
                                 builder: (BuildContext context,
                                     BoxConstraints constraints) {
-                                  print(
-                                      'The width is ${(constraints.constrainWidth() / 6).floor()}');
                                   return Flex(
                                     direction: Axis.horizontal,
                                     mainAxisAlignment:
@@ -88,7 +86,7 @@ class TicketViewWidget extends StatelessWidget {
                       )
                     ],
                   ),
-                  Gap(5),
+                  const Gap(5),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -119,18 +117,118 @@ class TicketViewWidget extends StatelessWidget {
             Container(
               color: Theme.of(context).primaryColorDark,
               child: Row(
-                children: const [
+                children: [
                   SizedBox(
                     height: 20,
                     width: 10,
                     child: DecoratedBox(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
+                        color: Theme.of(context).primaryColorLight,
+                        borderRadius: const BorderRadius.only(
                           topRight: Radius.circular(10),
                           bottomRight: Radius.circular(10),
                         ),
                       ),
                     ),
+                  ),
+                  Expanded(
+                      child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: LayoutBuilder(
+                      builder: (context, constraints) {
+                        return Flex(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisSize: MainAxisSize.max,
+                          direction: Axis.horizontal,
+                          children: List.generate(
+                            (constraints.constrainWidth() / 15).floor(),
+                            (index) => SizedBox(
+                              width: 5,
+                              height: 1,
+                              child: DecoratedBox(
+                                decoration: BoxDecoration(
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .onPrimary),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  )),
+                  SizedBox(
+                    height: 20,
+                    width: 10,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).primaryColorLight,
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          bottomLeft: Radius.circular(10),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(20.0),
+                    bottomRight: Radius.circular(20.0)),
+                color: Theme.of(context).colorScheme.secondaryContainer,
+              ),
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '1 MAY',
+                            style: Theme.of(context).primaryTextTheme.bodyText2,
+                          ),
+                          const Gap(3),
+                          Text(
+                            'DATE',
+                            style: Theme.of(context).primaryTextTheme.bodyText2,
+                          )
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '1 MAY',
+                            style: Theme.of(context).primaryTextTheme.bodyText2,
+                          ),
+                          const Gap(3),
+                          Text(
+                            'DATE',
+                            style: Theme.of(context).primaryTextTheme.bodyText2,
+                          )
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            '23D',
+                            style: Theme.of(context).primaryTextTheme.bodyText2,
+                          ),
+                          const Gap(3),
+                          Text(
+                            'SEAT',
+                            style: Theme.of(context).primaryTextTheme.bodyText2,
+                          )
+                        ],
+                      ),
+                    ],
                   )
                 ],
               ),
