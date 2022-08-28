@@ -29,9 +29,6 @@ class _BottomBarWidgetState extends State<BottomBarWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(_appBarName),
-      ),
       body: Center(
         child: _widgetOptions[_selectedPageIndex],
       ),
