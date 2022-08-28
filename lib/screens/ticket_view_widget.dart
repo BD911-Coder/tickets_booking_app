@@ -10,10 +10,10 @@ class TicketViewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
     return SizedBox(
-      width: size.width,
+      width: size.width * 0.85,
       height: size.height,
       child: Container(
-        margin: const EdgeInsets.only(left: 16),
+        margin: const EdgeInsets.only(right: 16),
         child: Column(
           children: [
             Container(
@@ -180,7 +180,8 @@ class TicketViewWidget extends StatelessWidget {
                     bottomRight: Radius.circular(20.0)),
                 color: Theme.of(context).colorScheme.secondaryContainer,
               ),
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.only(
+                  left: 16, top: 10, right: 16, bottom: 16),
               child: Column(
                 children: [
                   Row(
@@ -201,15 +202,15 @@ class TicketViewWidget extends StatelessWidget {
                         ],
                       ),
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            '1 MAY',
+                            '08.00 PM',
                             style: Theme.of(context).primaryTextTheme.bodyText2,
                           ),
                           const Gap(3),
                           Text(
-                            'DATE',
+                            'Departure Time',
                             style: Theme.of(context).primaryTextTheme.bodyText2,
                           )
                         ],
