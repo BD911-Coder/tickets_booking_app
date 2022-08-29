@@ -1,9 +1,14 @@
-import 'package:booking_app/utils/app_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
+import 'package:booking_app/utils/app_layout.dart';
+
 class HotelScreenWidget extends StatelessWidget {
-  const HotelScreenWidget({Key? key}) : super(key: key);
+  final Map<String, dynamic> hotel;
+  const HotelScreenWidget({
+    Key? key,
+    required this.hotel,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,25 +36,25 @@ class HotelScreenWidget extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
               color: Theme.of(context).primaryColor,
-              image: const DecorationImage(
+              image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage('assets/images/one.png'),
+                image: AssetImage('assets/images/${hotel['image']}'),
               ),
             ),
           ),
           const Gap(10),
           Text(
-            'Open Space',
+            '${hotel['place']}',
             style: Theme.of(context).textTheme.headline6,
           ),
           const Gap(5),
           Text(
-            'London',
+            '${hotel['destination']}',
             style: Theme.of(context).textTheme.bodyMedium,
           ),
           const Gap(8),
           Text(
-            '\$40/ Night',
+            '${hotel['price']} \$ / Night',
             style: Theme.of(context).textTheme.headline6,
           ),
         ],
