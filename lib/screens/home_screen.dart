@@ -99,14 +99,18 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 16),
                   width: size.width,
                   height: size.height * 0.2,
-                  child: ListView(
+                  child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
-                    children: const [
-                      TicketViewWidget(),
-                      TicketViewWidget(),
-                    ],
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: const [
+                        TicketViewWidget(),
+                        TicketViewWidget(),
+                      ],
+                    ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -129,7 +133,18 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const Gap(5),
-          HotelScreenWidget(),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.only(left: 20),
+            child: Row(
+              children: const [
+                HotelScreenWidget(),
+                HotelScreenWidget(),
+                HotelScreenWidget(),
+                HotelScreenWidget(),
+              ],
+            ),
+          ),
         ],
       ),
     );
