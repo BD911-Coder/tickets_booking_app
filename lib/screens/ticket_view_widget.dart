@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 class TicketViewWidget extends StatelessWidget {
-  const TicketViewWidget({Key? key}) : super(key: key);
+  final Map<String, dynamic> tickets;
+  const TicketViewWidget({Key? key, required this.tickets}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
+
     return SizedBox(
       width: size.width * 0.85,
       height: size.height,
@@ -29,7 +31,7 @@ class TicketViewWidget extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'NYC',
+                        '${tickets['from']['code']}',
                         style: Theme.of(context).textTheme.bodyText2,
                       ),
                       Expanded(child: Container()),
@@ -81,7 +83,7 @@ class TicketViewWidget extends StatelessWidget {
                       const ThickContainer(),
                       Expanded(child: Container()),
                       Text(
-                        'LDN',
+                        '${tickets['to']['code']}',
                         style: Theme.of(context).textTheme.bodyText2,
                       )
                     ],
@@ -93,18 +95,18 @@ class TicketViewWidget extends StatelessWidget {
                       SizedBox(
                         width: 100,
                         child: Text(
-                          'New York',
+                          '${tickets['from']['name']}',
                           style: Theme.of(context).primaryTextTheme.bodyText2,
                         ),
                       ),
                       Text(
-                        '8H 30M',
+                        '${tickets['flying_time']}',
                         style: Theme.of(context).primaryTextTheme.bodyText2,
                       ),
                       SizedBox(
                         width: 100,
                         child: Text(
-                          'London',
+                          '${tickets['to']['name']}',
                           textAlign: TextAlign.end,
                           style: Theme.of(context).primaryTextTheme.bodyText2,
                         ),
@@ -191,7 +193,7 @@ class TicketViewWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            '1 MAY',
+                            '${tickets['date']}',
                             style: Theme.of(context).primaryTextTheme.bodyText2,
                           ),
                           const Gap(3),
@@ -205,7 +207,7 @@ class TicketViewWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            '08.00 PM',
+                            '${tickets['departure_time']}',
                             style: Theme.of(context).primaryTextTheme.bodyText2,
                           ),
                           const Gap(3),
@@ -219,7 +221,7 @@ class TicketViewWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Text(
-                            '23D',
+                            '${tickets['seat']}',
                             style: Theme.of(context).primaryTextTheme.bodyText2,
                           ),
                           const Gap(3),
