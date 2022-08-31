@@ -27,6 +27,7 @@ class SearchScreenWidget extends StatelessWidget {
             AppLayout.getHeight(40),
           ),
           Container(
+            padding: const EdgeInsets.all(3.5),
             decoration: BoxDecoration(
               color: Theme.of(context).primaryColor,
               borderRadius: BorderRadius.circular(
@@ -36,21 +37,49 @@ class SearchScreenWidget extends StatelessWidget {
             child: Row(
               children: [
                 Container(
+                  padding:
+                      EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
                   width: size.width * 0.44,
                   decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.onBackground,
-                    borderRadius: BorderRadius.circular(
-                      AppLayout.getHeight(50),
+                    color: Theme.of(context).colorScheme.onPrimaryContainer,
+                    borderRadius: BorderRadius.horizontal(
+                      left: Radius.circular(
+                        AppLayout.getHeight(50),
+                      ),
                     ),
                   ),
-                  child: Text(
-                    'Airline Tickets',
-                    style: Theme.of(context)
-                        .primaryTextTheme
-                        .button
-                        ?.copyWith(color: Colors.blueAccent),
+                  child: Center(
+                    child: Text(
+                      'Airline Tickets',
+                      style: Theme.of(context)
+                          .primaryTextTheme
+                          .button
+                          ?.copyWith(color: Colors.blueAccent),
+                    ),
                   ),
-                )
+                ),
+                Container(
+                  padding:
+                      EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
+                  width: size.width * 0.44,
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.onPrimaryContainer,
+                    borderRadius: BorderRadius.horizontal(
+                      right: Radius.circular(
+                        AppLayout.getHeight(50),
+                      ),
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Hotels',
+                      style: Theme.of(context)
+                          .primaryTextTheme
+                          .button
+                          ?.copyWith(color: Colors.blueAccent),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
