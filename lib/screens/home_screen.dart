@@ -1,4 +1,5 @@
 import 'package:booking_app/screens/hotels_screen_widget.dart';
+import 'package:booking_app/screens/search_screen_widget.dart';
 import 'package:booking_app/screens/ticket_view_widget.dart';
 import 'package:booking_app/utils/app_info_list.dart';
 import 'package:booking_app/utils/styles/themes/flex_themes.dart';
