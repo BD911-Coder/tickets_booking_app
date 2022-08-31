@@ -96,13 +96,11 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 const Gap(13),
-                Container(
-                  padding: const EdgeInsets.only(right: 16),
-                  width: size.width,
-                  height: size.height * 0.2,
+                SizedBox(
+                  width: AppLayout.getWidth(390),
+                  height: AppLayout.getHeight(190),
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
-                    padding: const EdgeInsets.only(left: 20),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: ticketList

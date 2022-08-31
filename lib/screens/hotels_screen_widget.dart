@@ -12,11 +12,12 @@ class HotelScreenWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = AppLayout.getSize(context);
     return Container(
-      width: size.width * 0.5,
-      height: size.height * 0.4,
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17),
+      width: AppLayout.getWidth(230),
+      height: AppLayout.getHeight(340),
+      padding: EdgeInsets.symmetric(
+          horizontal: AppLayout.getHeight(15),
+          vertical: AppLayout.getWidth(20)),
       margin: const EdgeInsets.only(right: 17, top: 5, bottom: 10),
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColorDark,
@@ -32,7 +33,7 @@ class HotelScreenWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 190,
+            height: AppLayout.getHeight(190),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
               color: Theme.of(context).primaryColor,

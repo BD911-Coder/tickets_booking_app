@@ -36,10 +36,18 @@ class _BottomBarWidgetState extends State<BottomBarWidget> {
         currentIndex: _selectedPageIndex,
         onTap: _onItemTapped,
         elevation: 10,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        selectedItemColor: Colors.blueGrey,
-        unselectedItemColor: const Color(0xFF526480),
+        selectedItemColor:
+            Theme.of(context).bottomNavigationBarTheme.selectedItemColor,
+        unselectedItemColor:
+            Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,
+        backgroundColor:
+            Theme.of(context).bottomNavigationBarTheme.backgroundColor,
+        enableFeedback:
+            Theme.of(context).bottomNavigationBarTheme.enableFeedback,
+        selectedIconTheme:
+            Theme.of(context).bottomNavigationBarTheme.selectedIconTheme,
+        unselectedIconTheme:
+            Theme.of(context).bottomNavigationBarTheme.unselectedIconTheme,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
