@@ -7,6 +7,7 @@ class SearchScreenWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = AppLayout.getSize(context);
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: ListView(
@@ -32,7 +33,26 @@ class SearchScreenWidget extends StatelessWidget {
                 AppLayout.getHeight(50),
               ),
             ),
-            child: Text('lale'),
+            child: Row(
+              children: [
+                Container(
+                  width: size.width * 0.44,
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.onBackground,
+                    borderRadius: BorderRadius.circular(
+                      AppLayout.getHeight(50),
+                    ),
+                  ),
+                  child: Text(
+                    'Airline Tickets',
+                    style: Theme.of(context)
+                        .primaryTextTheme
+                        .button
+                        ?.copyWith(color: Colors.blueAccent),
+                  ),
+                )
+              ],
+            ),
           ),
         ],
       ),
