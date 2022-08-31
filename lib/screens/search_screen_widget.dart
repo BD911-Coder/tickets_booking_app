@@ -1,4 +1,5 @@
 import 'package:booking_app/utils/app_layout.dart';
+import 'package:booking_app/utils/widgets/custom_container_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -40,6 +41,7 @@ class SearchScreenWidget extends StatelessWidget {
                   padding:
                       EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
                   width: size.width * 0.44,
+                  height: size.height * 0.04,
                   decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.onPrimaryContainer,
                     borderRadius: BorderRadius.horizontal(
@@ -62,6 +64,7 @@ class SearchScreenWidget extends StatelessWidget {
                   padding:
                       EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
                   width: size.width * 0.44,
+                  height: size.height * 0.04,
                   decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.onPrimaryContainer,
                     borderRadius: BorderRadius.horizontal(
@@ -72,7 +75,7 @@ class SearchScreenWidget extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      'Hotels',
+                      'hotels',
                       style: Theme.of(context)
                           .primaryTextTheme
                           .button
@@ -83,6 +86,10 @@ class SearchScreenWidget extends StatelessWidget {
               ],
             ),
           ),
+          Gap(AppLayout.getHeight(25)),
+          const CustomContainerWidget(
+              containerIcon: Icons.flight_takeoff_rounded,
+              conteinerText: 'Departure')
         ],
       ),
     );
