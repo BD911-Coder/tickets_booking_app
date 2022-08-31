@@ -30,7 +30,7 @@ class SearchScreenWidget extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(3.5),
             decoration: BoxDecoration(
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).colorScheme.primaryContainer,
               borderRadius: BorderRadius.circular(
                 AppLayout.getHeight(50),
               ),
@@ -89,7 +89,33 @@ class SearchScreenWidget extends StatelessWidget {
           Gap(AppLayout.getHeight(25)),
           const CustomContainerWidget(
               containerIcon: Icons.flight_takeoff_rounded,
-              conteinerText: 'Departure')
+              conteinerText: 'Departure'),
+          Gap(
+            AppLayout.getHeight(15),
+          ),
+          const CustomContainerWidget(
+              containerIcon: Icons.flight_land_rounded,
+              conteinerText: 'Arrival'),
+          Gap(
+            AppLayout.getHeight(20),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(
+                vertical: AppLayout.getWidth(12),
+                horizontal: AppLayout.getHeight(12)),
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.secondaryContainer,
+              borderRadius: BorderRadius.circular(
+                AppLayout.getWidth(10),
+              ),
+            ),
+            child: Center(
+              child: Text(
+                'Find Ticket',
+                style: Theme.of(context).primaryTextTheme.headline5,
+              ),
+            ),
+          ),
         ],
       ),
     );

@@ -4,14 +4,14 @@ import 'package:gap/gap.dart';
 import '../app_layout.dart';
 
 class CustomContainerWidget extends StatelessWidget {
-  final String _continerText;
+  final String _containerText;
   final IconData _containerIcon;
   const CustomContainerWidget({
     Key? key,
     required IconData containerIcon,
     required String conteinerText,
   })  : _containerIcon = containerIcon,
-        _continerText = conteinerText,
+        _containerText = conteinerText,
         super(key: key);
 
   @override
@@ -21,7 +21,7 @@ class CustomContainerWidget extends StatelessWidget {
           vertical: AppLayout.getWidth(12),
           horizontal: AppLayout.getHeight(12)),
       decoration: BoxDecoration(
-        color: Theme.of(context).toggleButtonsTheme.borderColor,
+        color: Theme.of(context).colorScheme.primaryContainer,
         borderRadius: BorderRadius.circular(
           AppLayout.getWidth(10),
         ),
@@ -36,7 +36,7 @@ class CustomContainerWidget extends StatelessWidget {
             AppLayout.getWidth(10),
           ),
           Text(
-            _continerText,
+            _containerText,
             style: Theme.of(context).primaryTextTheme.bodyText1,
           )
         ],
