@@ -3,6 +3,7 @@ import 'package:booking_app/screens/search_screen_widget.dart';
 import 'package:booking_app/screens/ticket_view_widget.dart';
 import 'package:booking_app/utils/app_info_list.dart';
 import 'package:booking_app/utils/styles/themes/flex_themes.dart';
+import 'package:booking_app/utils/widgets/double_text_widget.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -80,21 +81,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const Gap(25),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Upcoming Flights',
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
-                    InkWell(
-                      onTap: () => print('Tapped'),
-                      child: Text(
-                        'View all',
-                        style: Theme.of(context).textTheme.titleMedium,
-                      ),
-                    ),
-                  ],
+                const DoubleTextWidget(
+                  widgetTitle: 'Upcoming Flights',
+                  widgetSubtitle: 'View All',
                 ),
                 const Gap(13),
                 SizedBox(
@@ -116,20 +105,9 @@ class HomeScreen extends StatelessWidget {
           ),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Hotels',
-                  style: Theme.of(context).textTheme.titleLarge,
-                ),
-                InkWell(
-                  child: Text(
-                    'View all',
-                    style: Theme.of(context).textTheme.titleMedium,
-                  ),
-                ),
-              ],
+            child: const DoubleTextWidget(
+              widgetTitle: 'Book Hotel',
+              widgetSubtitle: 'View All',
             ),
           ),
           const Gap(5),
