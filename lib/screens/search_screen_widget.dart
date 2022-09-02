@@ -212,6 +212,71 @@ class SearchScreenWidget extends StatelessWidget {
                       ),
                     ],
                   ),
+                  const Gap(15),
+                  Container(
+                    width: size.width * 0.44,
+                    height: AppLayout.getHeight(208),
+                    padding: EdgeInsets.symmetric(
+                        vertical: AppLayout.getHeight(15),
+                        horizontal: AppLayout.getHeight(30)),
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.primaryContainer,
+                      borderRadius: BorderRadius.circular(
+                        AppLayout.getHeight(18),
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Theme.of(context).colorScheme.onBackground,
+                          blurRadius: 10,
+                          spreadRadius: 1,
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      children: [
+                        Text(
+                          'Take love',
+                          style: Theme.of(context).textTheme.titleLarge,
+                          textAlign: TextAlign.center,
+                        ),
+                        const Gap(5),
+                        RichText(
+                          text: const TextSpan(
+                            children: [
+                              TextSpan(
+                                text: '🥂 ',
+                                style: TextStyle(fontSize: 26),
+                              ),
+                              TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: '😍',
+                                    style: TextStyle(fontSize: 50),
+                                  ),
+                                ],
+                              ),
+                              TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: ' 🥂',
+                                    style: TextStyle(fontSize: 26),
+                                  ),
+                                ],
+                              ),
+                              TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: 'Rate us!',
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ],
