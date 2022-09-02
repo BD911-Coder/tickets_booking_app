@@ -1,19 +1,19 @@
 import 'package:booking_app/screens/home_screen.dart';
-import 'package:booking_app/screens/search_screen_widget.dart';
+import 'package:booking_app/screens/search_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
-class BottomBarWidget extends StatefulWidget {
-  const BottomBarWidget({Key? key}) : super(key: key);
+class BottomBarScreen extends StatefulWidget {
+  const BottomBarScreen({Key? key}) : super(key: key);
 
   @override
-  State<BottomBarWidget> createState() => _BottomBarWidgetState();
+  State<BottomBarScreen> createState() => _BottomBarWidgetState();
 }
 
-class _BottomBarWidgetState extends State<BottomBarWidget> {
+class _BottomBarWidgetState extends State<BottomBarScreen> {
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
-    SearchScreenWidget(),
+    const SearchScreen(),
     const Text('Ticket'),
     const Text('Profile'),
   ];

@@ -3,9 +3,9 @@ import 'package:gap/gap.dart';
 
 import 'package:booking_app/utils/app_layout.dart';
 
-class HotelScreenWidget extends StatelessWidget {
+class HotelScreen extends StatelessWidget {
   final Map<String, dynamic> hotel;
-  const HotelScreenWidget({
+  const HotelScreen({
     Key? key,
     required this.hotel,
   }) : super(key: key);

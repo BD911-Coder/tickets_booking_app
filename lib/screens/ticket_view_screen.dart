@@ -3,14 +3,12 @@ import 'package:booking_app/utils/widgets/thick_container.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-class TicketViewWidget extends StatelessWidget {
+class TicketViewScreen extends StatelessWidget {
   final Map<String, dynamic> tickets;
-  const TicketViewWidget({Key? key, required this.tickets}) : super(key: key);
+  const TicketViewScreen({Key? key, required this.tickets}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final size = AppLayout.getSize(context);
-
     return SizedBox(
       width: AppLayout.getWidth(350),
       height: AppLayout.getHeight(200),

@@ -1,4 +1,4 @@
-import 'package:booking_app/screens/bottom_bar_widget.dart';
+import 'package:booking_app/screens/bottom_bar_screen.dart';
 import 'package:booking_app/utils/styles/themes/flex_themes.dart';
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
 
         return MaterialApp(
           theme: FlexTheme.darkTheme(),
-          home: const BottomBarWidget(),
+          home: const BottomBarScreen(),
           debugShowCheckedModeBanner: false,
         );
       },

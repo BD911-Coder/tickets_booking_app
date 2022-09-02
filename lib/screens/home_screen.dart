@@ -1,8 +1,6 @@
-import 'package:booking_app/screens/hotels_screen_widget.dart';
-import 'package:booking_app/screens/search_screen_widget.dart';
-import 'package:booking_app/screens/ticket_view_widget.dart';
+import 'package:booking_app/screens/hotels_screen.dart';
+import 'package:booking_app/screens/ticket_view_screen.dart';
 import 'package:booking_app/utils/app_info_list.dart';
-import 'package:booking_app/utils/styles/themes/flex_themes.dart';
 import 'package:booking_app/utils/widgets/double_text_widget.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
@@ -95,7 +93,7 @@ class HomeScreen extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: ticketList
                           .map((ticketList) =>
-                              TicketViewWidget(tickets: ticketList))
+                              TicketViewScreen(tickets: ticketList))
                           .toList(),
                     ),
                   ),
@@ -116,7 +114,7 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.only(left: 20),
             child: Row(
                 children: hotelList
-                    .map((hotelList) => HotelScreenWidget(hotel: hotelList))
+                    .map((hotelList) => HotelScreen(hotel: hotelList))
                     .toList()),
           ),
         ],

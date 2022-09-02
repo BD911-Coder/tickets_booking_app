@@ -1,12 +1,13 @@
 import 'package:booking_app/utils/app_layout.dart';
 import 'package:booking_app/utils/widgets/custom_container_widget.dart';
+import 'package:booking_app/utils/widgets/ticket_tabs_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 import '../utils/widgets/double_text_widget.dart';
 
-class SearchScreenWidget extends StatelessWidget {
-  const SearchScreenWidget({Key? key}) : super(key: key);
+class SearchScreen extends StatelessWidget {
+  const SearchScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,66 +30,8 @@ class SearchScreenWidget extends StatelessWidget {
           Gap(
             AppLayout.getHeight(40),
           ),
-          Container(
-            padding: const EdgeInsets.all(3.5),
-            decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.primaryContainer,
-              borderRadius: BorderRadius.circular(
-                AppLayout.getHeight(50),
-              ),
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  padding:
-                      EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
-                  width: size.width * 0.44,
-                  height: size.height * 0.04,
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.onPrimaryContainer,
-                    borderRadius: BorderRadius.horizontal(
-                      left: Radius.circular(
-                        AppLayout.getHeight(50),
-                      ),
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Airline Tickets',
-                      style: Theme.of(context)
-                          .primaryTextTheme
-                          .button
-                          ?.copyWith(color: Colors.blueAccent),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding:
-                      EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
-                  width: size.width * 0.44,
-                  height: size.height * 0.04,
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.onPrimaryContainer,
-                    borderRadius: BorderRadius.horizontal(
-                      right: Radius.circular(
-                        AppLayout.getHeight(50),
-                      ),
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Hotels',
-                      style: Theme.of(context)
-                          .primaryTextTheme
-                          .button
-                          ?.copyWith(color: Colors.blueAccent),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+          const TicketTabsViewWidget(
+              firstTabTitle: 'Airline Ticket', secondTabTitle: 'Hotels'),
           Gap(AppLayout.getHeight(25)),
           const CustomContainerWidget(
               containerIcon: Icons.flight_takeoff_rounded,
