@@ -5,7 +5,11 @@ import 'package:gap/gap.dart';
 
 class TicketViewScreen extends StatelessWidget {
   final Map<String, dynamic> tickets;
-  const TicketViewScreen({Key? key, required this.tickets}) : super(key: key);
+  final bool? _isColorChange;
+  const TicketViewScreen(
+      {Key? key, required this.tickets, required bool isColorChange})
+      : _isColorChange = isColorChange,
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {

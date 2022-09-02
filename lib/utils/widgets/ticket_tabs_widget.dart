@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../app_layout.dart';
 
-class TicketTabsViewWidget extends StatelessWidget {
-  const TicketTabsViewWidget(
+class CustomTicketTabs extends StatelessWidget {
+  const CustomTicketTabs(
       {Key? key, required String firstTabTitle, required String secondTabTitle})
       : _firstTabTitle = firstTabTitle,
         _secondTabTitle = secondTabTitle,

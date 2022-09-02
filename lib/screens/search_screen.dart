@@ -30,7 +30,7 @@ class SearchScreen extends StatelessWidget {
           Gap(
             AppLayout.getHeight(40),
           ),
-          const TicketTabsViewWidget(
+          const CustomTicketTabs(
               firstTabTitle: 'Airline Ticket', secondTabTitle: 'Hotels'),
           Gap(AppLayout.getHeight(25)),
           const CustomContainerWidget(
