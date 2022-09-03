@@ -25,7 +25,9 @@ class TicketViewScreen extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(AppLayout.getHeight(20)),
                     topRight: Radius.circular(AppLayout.getHeight(12))),
-                color: Theme.of(context).colorScheme.primaryContainer,
+                color: _isColorChange == true
+                    ? Theme.of(context).colorScheme.primaryContainer
+                    : Theme.of(context).colorScheme.background,
               ),
               padding: EdgeInsets.all(AppLayout.getHeight(16)),
               child: Column(
