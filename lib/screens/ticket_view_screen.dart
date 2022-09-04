@@ -15,7 +15,7 @@ class TicketViewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: AppLayout.getWidth(350),
-      height: AppLayout.getHeight(200),
+      height: AppLayout.getHeight(178),
       child: Container(
         margin: EdgeInsets.only(right: AppLayout.getHeight(12)),
         child: Column(
@@ -184,7 +184,9 @@ class TicketViewScreen extends StatelessWidget {
                 borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(20.0),
                     bottomRight: Radius.circular(20.0)),
-                color: Theme.of(context).colorScheme.secondaryContainer,
+                color: _isColorChange == true
+                    ? Theme.of(context).colorScheme.primaryContainer
+                    : Theme.of(context).colorScheme.background,
               ),
               padding: const EdgeInsets.only(
                   left: 16, top: 10, right: 16, bottom: 16),

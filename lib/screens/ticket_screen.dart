@@ -10,7 +10,9 @@ class TicketScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = AppLayout.getSize;
+    final _customTextTheme = Theme.of(context).textTheme.bodyText2;
+    final _customContainerTheme = Theme.of(context).colorScheme.background;
+    Theme.of(context).colorScheme.primaryContainer;
     return Scaffold(
       body: Stack(
         children: [
@@ -43,8 +45,37 @@ class TicketScreen extends StatelessWidget {
                   isColorChange: false,
                 ),
               ),
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: AppLayout.getHeight(15),
+                ),
+                color: _customContainerTheme,
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Column(
+                          children: [
+                            Text(
+                              'BD911-Coder',
+                              style: _customTextTheme,
+                            ),
+                            Gap(
+                              AppLayout.getHeight(5),
+                            ),
+                            Text(
+                              'BD911-Coder',
+                              style: _customTextTheme,
+                            ),
+                          ],
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              )
             ],
-          )
+          ),
         ],
       ),
     );
