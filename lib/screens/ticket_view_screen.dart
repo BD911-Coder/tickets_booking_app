@@ -15,7 +15,7 @@ class TicketViewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: AppLayout.getWidth(350),
-      height: AppLayout.getHeight(187),
+      height: _isColorChange==true? AppLayout.getHeight(187): AppLayout.getHeight(185),
       child: Container(
         margin: EdgeInsets.only(right: AppLayout.getHeight(12)),
         child: Column(
