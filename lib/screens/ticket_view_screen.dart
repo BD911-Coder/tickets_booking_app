@@ -185,7 +185,9 @@ class TicketViewScreen extends StatelessWidget {
                     bottomLeft: _isColorChange == true
                         ? const Radius.circular(20.0)
                         : const Radius.circular(0),
-                    bottomRight: const Radius.circular(20.0)),
+                    bottomRight: _isColorChange == true
+                        ? const Radius.circular(20.0)
+                        : const Radius.circular(0)),
                 color: _isColorChange == true
                     ? Theme.of(context).colorScheme.primaryContainer
                     : Theme.of(context).colorScheme.background,
