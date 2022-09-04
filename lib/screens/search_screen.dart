@@ -72,7 +72,7 @@ class SearchScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                height: AppLayout.getHeight(400),
+                height: AppLayout.getHeight(500),
                 width: size.width * 0.42,
                 padding: EdgeInsets.symmetric(
                     horizontal: AppLayout.getHeight(15),
@@ -114,7 +114,7 @@ class SearchScreen extends StatelessWidget {
                     children: [
                       Container(
                         width: size.width * 0.44,
-                        height: AppLayout.getHeight(176),
+                        height: AppLayout.getHeight(300),
                         padding: EdgeInsets.symmetric(
                             vertical: AppLayout.getHeight(15),
                             horizontal: AppLayout.getHeight(15)),
@@ -158,7 +158,7 @@ class SearchScreen extends StatelessWidget {
                   const Gap(15),
                   Container(
                     width: size.width * 0.44,
-                    height: AppLayout.getHeight(208),
+                    height: AppLayout.getHeight(180),
                     padding: EdgeInsets.symmetric(
                         vertical: AppLayout.getHeight(15),
                         horizontal: AppLayout.getHeight(30)),
@@ -187,22 +187,10 @@ class SearchScreen extends StatelessWidget {
                           text: const TextSpan(
                             children: [
                               TextSpan(
-                                text: '🥂 ',
-                                style: TextStyle(fontSize: 26),
-                              ),
-                              TextSpan(
                                 children: [
                                   TextSpan(
-                                    text: '😍',
+                                    text: '😍\n',
                                     style: TextStyle(fontSize: 50),
-                                  ),
-                                ],
-                              ),
-                              TextSpan(
-                                children: [
-                                  TextSpan(
-                                    text: ' 🥂',
-                                    style: TextStyle(fontSize: 26),
                                   ),
                                 ],
                               ),

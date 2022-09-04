@@ -14,7 +14,7 @@ class HotelScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: AppLayout.getWidth(230),
-      height: AppLayout.getHeight(340),
+      height: AppLayout.getHeight(345),
       padding: EdgeInsets.symmetric(
           horizontal: AppLayout.getHeight(15),
           vertical: AppLayout.getWidth(20)),
